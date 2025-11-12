@@ -26,11 +26,9 @@ with col2:
 # -----------------------------
 # CONFIGURAR CLIENTE GROQ VIA SECRETS
 # -----------------------------
-# No arquivo .streamlit/secrets.toml:
-# [groq]
-# api_key = "SUA_CHAVE_AQUI"
 
-groq_api_key = st.secrets["groq"]["api_key"]
+
+groq_api_key = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=groq_api_key)
 
 # -----------------------------
