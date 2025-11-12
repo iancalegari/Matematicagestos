@@ -1,0 +1,7 @@
+opencv-python==4.8.1.78
+mediapipe==0.10.11
+cvzone==1.6.6
+numpy==1.26.0
+Pillow==10.1.0
+streamlit==1.30.0
+groq==0.0.5
