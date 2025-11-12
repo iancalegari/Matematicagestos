@@ -24,9 +24,14 @@ with col2:
     output_text_area = st.empty()
 
 # -----------------------------
-# CONFIGURAR CLIENTE GROQ
+# CONFIGURAR CLIENTE GROQ VIA SECRETS
 # -----------------------------
-client = Groq(api_key="SUA_CHAVE_AQUI")  # coloque sua chave válida
+# No arquivo .streamlit/secrets.toml:
+# [groq]
+# api_key = "SUA_CHAVE_AQUI"
+
+groq_api_key = st.secrets["groq"]["api_key"]
+client = Groq(api_key=groq_api_key)
 
 # -----------------------------
 # CONFIGURAR CÂMERA
